@@ -1,27 +1,38 @@
-int ballX=500;
-int bodyX-250;
+//int ballX=500;
+int houseX=150;
+int houseY= 250;
+int treeX= 50;
+int treeY= 500;
 void setup()
 {
 	size (600, 600);
 }
 void draw()
 {
-  background(0, 100, 255);
-  idk();
-  ball();
+  background(0, 200, 255);
+  fill(0, 255, 0);
+  rect(0, 400, 600, 200);
+  trees();
+  house();
+  //ball();
 }
-void idk()
+void trees()
 {
-	fill(255, 255, 255);
-	stroke(0, 0, 0);
-	ellipse(bodyX, 400, 250, 325);
-	ellipse (bodyX, 250, 200, 150);
-	arc(550, 575, 50, 50, 0, PI);
-
+	fill(100, 100, 100);
+	rect(treeX-25, treeY, 75, 100);
+	triangle (treeX-100, treeY, treeX+30, treeY-150, treeX+150, treeY);
 }
-void ball()
+void house()
+{
+	noStroke();
+	fill(200, 20, 30);
+	rect(houseX, houseY, 350, 300);
+	triangle(houseX-50, houseY, houseX+175, houseY-150, houseX+400, houseY);
+}
+
+/*void ball()
 {
 	fill(0,0,0);
 	ellipse(ballX, 500, 100, 100);
-}
+}*/
 
