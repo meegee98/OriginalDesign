@@ -3,33 +3,53 @@ int houseX=150;
 int houseY= 250;
 int treeX=50;
 int treeY=400;
+boolean mouseisPressed= false;
 void setup()
 {
 	size (600, 600);
+	
 }
-void draw() if (mouseisPressed == true)
+void draw () 
 {
-	background(0,0,0);
+  if(mouseisPressed == true)
+  {
+  	background(0, 200, 255);
+  	fill(0, 255, 0);
+ 	rect(0, 400, 600, 200);
+  	trees();
+  	house();
+  }
+  else
+	{
+	  background(0,0,0);
+	  night();
+	  
+	}
 }
-else
-{
-  background(0, 200, 255);
-  fill(0, 255, 0);
-  rect(0, 400, 600, 200);
-  trees();
-  house();
 
-  //ball();
+void night()
+{
+	frameRate(10);
+	int starX= (int)(Math.random()*595);
+	int starY= (int)(Math.random()*595);
+		noStroke();
+		fill(255, 255, 200, 60);
+		ellipse(starX, starY, 10, 10);
+		fill(255, 255, 200);
+		ellipse(500, 90, 150, 150);
 }
 void trees()
 {
-	fill(100, 100, 100);
+	fill(139, 69, 19);
 	rect(treeX-25, treeY, 75, 100);
+	rect(treeX+460, treeY, 75, 100);
+
+	fill(0, 200, 0);
 	triangle (treeX-100, treeY, treeX+20, treeY-150, treeX+150, treeY);
 	triangle (treeX-100, treeY-100, treeX+20, treeY-250, treeX+150, treeY-100);
 	triangle (treeX-100, treeY-200, treeX+20, treeY-350, treeX+150, treeY-200);
 
-	rect(treeX+460, treeY, 75, 100);
+	
 	triangle (treeX+350, treeY, treeX+475, treeY-150, treeX+650, treeY);
 	triangle (treeX+350, treeY-100, treeX+475, treeY-250, treeX+650, treeY-100);
 	triangle (treeX+350, treeY-200, treeX+475, treeY-350, treeX+650, treeY-200);
