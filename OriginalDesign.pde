@@ -3,29 +3,37 @@ int houseX=150;
 int houseY= 250;
 int treeX=50;
 int treeY=400;
-boolean mouseisPressed= false;
+
 void setup()
 {
 	size (600, 600);
 	
 }
+
 void draw () 
 {
-  if(mouseisPressed == true)
-  {
-  	background(0, 200, 255);
+  		
+
+  		mouseClicked();
+  		background(0,0,0);
+	  night();
+  		
+  		
+}
+	  
+	  
+	  
+	
+
+void mouseClicked()
+{	
+	background(0, 200, 255);
   	fill(0, 255, 0);
  	rect(0, 400, 600, 200);
   	trees();
   	house();
-  }
-  else
-	{
-	  background(0,0,0);
-	  night();
-	  
-	}
-}
+	
+	}	
 
 void night()
 {
@@ -57,21 +65,15 @@ void trees()
 void house()
 {
 	noStroke();
-	fill(200, 20, 30);
+	fill(255, 228, 196);
 	rect(houseX, houseY, 325, 300);
-	fill(0, 105, 255);
+	fill(205, 92, 92);
 	triangle(houseX-50, houseY, houseX+165, houseY-150, houseX+375, houseY);
+	fill(255, 192, 203);
+	rect(houseX+100, houseY+50, houseX+25, 250);
+	fill(0,0,0);
+	ellipse(400, 400, 25, 25);
 }
 
-/*void ball()
-{
-	fill(0,0,0);
-	ellipse(ballX, 500, 100, 100);
-}*/
-/*void draw() if (mouseisPressed == true)
-{background ()
-} 
-else 
-{
-	background }
-	*/
+
+
