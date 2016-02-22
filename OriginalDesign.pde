@@ -12,19 +12,10 @@ void setup()
 
 void draw () 
 {
-  		
-
-  		mouseClicked();
-  		background(0,0,0);
+  	mouseClicked();
+  	background(0,0,0);
 	  night();
-  		
-  		
 }
-	  
-	  
-	  
-	
-
 void mouseClicked()
 {	
 	background(0, 200, 255);
@@ -32,9 +23,7 @@ void mouseClicked()
  	rect(0, 400, 600, 200);
   	trees();
   	house();
-	
-	}	
-
+}	
 void night()
 {
 	frameRate(10);
@@ -74,6 +63,3 @@ void house()
 	fill(0,0,0);
 	ellipse(400, 400, 25, 25);
 }
-
-
-
